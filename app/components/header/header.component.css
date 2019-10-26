@@ -1,0 +1,62 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+
+header {
+    height: 90vh; /*the height of the element will be 95% of the viewport height */
+    /* background with gradient green colored with opacity 80%*/
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(126, 213, 111, 0.8),
+        rgba(40, 180, 131, 0.8)),
+        url(../../../assets/img/hero.jpg);
+    background-size: cover; /* viewport or element width will try to fit the element
+    inside the box*/
+    background-position: top; /* no matter how we will nerrow the screen the background
+    will stay on at the top */
+    /* clip path used to cut the element and shape it as we want.
+    more shapes available at "clippy" webpage.*/
+     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+     /*header position set to reletive because the logo element inside it is absolute
+     position and needs a starting point*/
+     position: relative;
+
+
+}
+
+.logo-box{
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+.header__text-box{
+    /*centering text procedure:*/
+    position: absolute;
+    /*move the text from the top to 50% of the page+ 50% right
+    40% height instead of 50% because in this project the bottom is cropped
+    */
+    top:40%;
+    left:50%;
+    /*now get text back 50% back of the text position in order to center it*/
+    transform: translate(-50%,-50%);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.btn-box{
+    /*positioning the button under the headings and centering it*/
+    
+    /*make button height smaller*/
+    line-height: 40%;
+}
+
+
+
+

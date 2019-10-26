@@ -1,0 +1,27 @@
+.logo{
+    height: 3.5rem; /*browser will set automaticly the width by it's height */
+    filter: brightness(0.5)  sepia(1) saturate(500%);
+}
+
+
+.logo:hover{
+    animation: moveInRight 3s ease-out;
+
+}
+
+
+
+@keyframes moveInRight{
+    0%{ /*0% means the starting point of the animation*/
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    50%{ /* moves too much to the right */
+        transform: translateX(-2rem);
+    }  /*then goes back left to the center*/
+    100%{   /* 100% means the end of the animation*/
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+

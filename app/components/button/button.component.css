@@ -1,0 +1,97 @@
+.btn, .btn-link{
+    /* make the button edges round*/
+    border-radius: 10rem;
+    /* helps us with the round shadow bug*/
+    display: inline-block;
+
+}
+.btn-link{
+    font-weight: 700;
+    
+}
+.btn-link:link, .btn-link:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    transition: all 0.2s;
+    /*for the after effect button positioning wi use reletive position*/
+    position: relative;
+
+
+}
+/*make button with gradient background*/
+.btn-link-white{
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(48, 5, 238, 0.8),
+        rgba(231, 9, 165, 0.8));
+    color: orange;
+
+}
+.btn-link:hover{
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.4);/*shadow effect part1*/
+}
+/*make the button go up when hoover on it*/
+.btn:hover{
+    transform:translateY(-0.3rem);
+}
+.btn-link:active{
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.4);/*shadow effect part2*/
+}
+/*return button to its original place after hoover or pressed*/
+.btn:active{
+    transform: translateY(-0.1rem);
+}
+
+/*creating another button that will fly after effect
+this button has to look exacty like the original button.*/
+.btn-link::after{
+    border-radius: 10rem;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* z-index set the position of elements on top one of another so this one
+    -1 means it's behind another*/
+    z-index: -1;
+    /*controls the animation of the hover*/
+    transition: all 1s;
+}
+
+.btn-link-white::after{
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(48, 5, 238, 0.8),
+        rgba(231, 9, 165, 0.8));
+    
+    
+
+}
+
+.btn-link:hover::after{
+    transform: scaleX(1.15) scaleY(1.5);
+    opacity: 0;
+}
+
+.btn-animated{
+    /*.75s means the delay*/
+    animation: moveInButton .5s ease-out .75s; 
+    /*animation fill mode start animation before element appears*/
+    animation-fill-mode: backwards;   
+
+}
+/*make the button move up in the loading of the page*/
+@keyframes moveInButton{
+    0%{ /*0% means the starting point of the animation*/
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    
+    100%{   /* 100% means the end of the animation*/
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 

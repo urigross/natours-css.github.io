@@ -1,0 +1,32 @@
+/* rgba(126, 213, 111, 0.8),
+rgba(40, 180, 131, 0.8)), */
+
+h1{
+    margin: 0; /* each element in angular should control its margin through the component*/
+    background: linear-gradient(
+        to right bottom,
+        rgba(48, 5, 238, 0.8),
+        rgba(231, 9, 165, 0.8));
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1.24rem;
+    animation: moveInRight 3s ease-out;       
+}
+/* we definve animation here: opacity means it will appear from nothing. transtorm
+translatex means it will move on x axis. */
+@keyframes moveInRight{
+    0%{ /*0% means the starting point of the animation*/
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    50%{ /* moves too much to the right */
+        transform: translateX(-2rem);
+    }  /*then goes back left to the center*/
+    100%{   /* 100% means the end of the animation*/
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

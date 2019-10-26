@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*Initilizing the font-size. All the project responsive (REM) font sizes will
+relay the font size*/
+
+*,
+*::before
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: inherit; /*Will inhirit behaviour from the body element*/
+}
+
+html{
+    /*The default font-size on browser is 16px. 62.5% is 10px what we want
+    to be the initial font-size. It allows to zoom the webpage by the user */
+    font-size: 62.5%;
+}
+
+
+body {   /* everything on fonts should be in body selector */
+    font-family: "lato", sans-serif;    /*lato font and it's weight we included on the html code it's 
+    an external google font */
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7; /*means 1.7 x of the predefined line height */
+    padding: 1rem;
+    box-sizing: border-box; /* means: border height and border width */
+
+}

@@ -1,0 +1,15 @@
+/* rgba(126, 213, 111, 0.8),
+rgba(40, 180, 131, 0.8)), */
+
+.heading-primary{
+    text-transform: uppercase; 
+    backface-visibility: hidden; /* prevents the animation bug to go up a bit after finish*/
+    margin-bottom: 6rem; /*set the distance from the parent element bottom*/
+}
+
+
+
+
+
+
+
